@@ -2,4 +2,8 @@
 
 Project for practical work in an Agile Training Session
 
-Builds with Circle CI
+Uses:
+
+* Maven for building
+* Cucumber for Acceptance Tests
+* Builds with Circle CI
