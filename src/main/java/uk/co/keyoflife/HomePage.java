@@ -1,7 +1,10 @@
 package uk.co.keyoflife;
 
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-import org.apache.wicket.markup.html.basic.Label;
+
+import uk.co.keyoflife.domain.Employee;
+
+import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.markup.html.WebPage;
 
 public class HomePage extends WebPage {
@@ -10,6 +13,10 @@ public class HomePage extends WebPage {
 	public HomePage(final PageParameters parameters) {
 		super(parameters);
 
-		// TODO Add your page's components here
+		Employee employeeToPay = new Employee();
+		
+		final FeedbackPanel feedbackPanel = new FeedbackPanel("feedback");
+		add(feedbackPanel);
+		add(new PayCalculationForm("paycalculationForm", employeeToPay));
 	}
 }
