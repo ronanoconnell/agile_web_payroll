@@ -50,10 +50,13 @@ jobs:
           command: mvn jetty:run
           background: true
 
-      - run: sleep 1m
+      - run:
+          name: Sleep to allow aplicatio to start
+          command: sleep 20s
 
-      # run tests!
-      - run: mvn verify
+      - run:
+          name: run tests
+          command: mvn verify
 
       - store_test_results:
           path: target/surefire-reports
