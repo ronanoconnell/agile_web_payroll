@@ -50,6 +50,8 @@ jobs:
           command: mvn jetty:run
           background: true
 
+      - run: sleep 1m
+
       # run tests!
       - run: mvn verify
 
