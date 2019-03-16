@@ -44,7 +44,7 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
-      - run: mvn jetty:run
+      - run:
           name: Start Web Application
           command: mvn jetty:run
           background: true
