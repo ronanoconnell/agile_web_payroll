@@ -44,8 +44,11 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
-      # Start the payroll application
       - run: mvn jetty:run
+          name: Start Web Application
+          command: mvn jetty:run
+          background: true
+
       # run tests!
       - run: mvn verify
 
