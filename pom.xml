@@ -26,7 +26,7 @@
 	<version>1.0-SNAPSHOT</version>
 		<!-- TODO project name  -->
 	<name>quickstart</name>
-	<description></description>
+	<description>Project for showing Agile in Action</description>
 	<!--
 		<organization>
 			<name>company name</name>
@@ -186,6 +186,14 @@
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<wtpversion>${wtp.version}</wtpversion>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<!-- Required to prevent missing class error when running with OpenJDK on CirceCI. see: https://stackoverflow.com/questions/53010200/maven-surefire-could-not-find-forkedbooter-class -->
+					<argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 				</configuration>
 			</plugin>
 		</plugins>
