@@ -194,9 +194,6 @@
 				<configuration>
 					<!-- Required to prevent missing class error when running with OpenJDK on CirceCI. see: https://stackoverflow.com/questions/53010200/maven-surefire-could-not-find-forkedbooter-class -->
 					<argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-					<includes>
-						<include>**/*Test.java</include>
-					</includes>
 				</configuration>
 			</plugin>
 		</plugins>

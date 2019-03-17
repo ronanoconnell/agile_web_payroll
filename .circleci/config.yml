@@ -51,7 +51,7 @@ jobs:
           command: sleep 20s
 
       - run:
-          name: run acceptance tests
+          name: build and run all tests
           command: mvn verify
 
       - store_test_results:
