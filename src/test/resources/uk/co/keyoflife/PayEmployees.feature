@@ -22,3 +22,10 @@ Feature: Pay Employees
   Scenario: Payroll Loads
     Given I visit the payroll web site
     Then The Page title should be "Agile Payroll Home"
+
+  Scenario: Calculate Pay for a salaried employee
+    Given An employee named "Joe Blogs"
+    And is paid £12,000 per annum
+    And has an annual Tax credit of £1,200
+    When their pay is calculated
+    Then their net pay is £900.00
