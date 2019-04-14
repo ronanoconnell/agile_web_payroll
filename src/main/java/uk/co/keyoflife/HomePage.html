@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:wicket="http://wicket.apache.org">
+<html>
 	<head>
 		<meta charset="utf-8" />
 		<title>Agile Payroll Home</title>
@@ -18,6 +18,38 @@
 			<p>
 				This is the Agile Web Payroll used to demonstrate Agile Software Development.
 			</p>
+            <div>
+				<form method="post" name="payroll-calculation" id="calculation-form">
+					<dl>
+						<dt>
+							<label for="employeeName">Employee Name</label>
+						</dt>
+                        <dd><input type="text" id="employeeName" name="employeeName"/></dd>
+					</dl>
+					<dl>
+						<dt>
+							<label for="employeeSalary">Employee Salary</label>
+						</dt>
+                        <dd><input id="employeeSalary" name="employeeSalary" autocomplete="off" style="cursor: auto;"/>
+                        </dd>
+					</dl>
+					<dl>
+						<dt>
+							<label for="employeeTaxCredit">Tax Credit</label>
+						</dt>
+						<dd><input id="employeeTaxCredit" name="employeeTaxCredit" style="cursor: pointer;"/></dd>
+					</dl>
+					<dl>
+						<dt>
+							<label for="netPay">Net Pay</label>
+						</dt>
+                        <dd><input type="text" id="netPay" name="netPay" readonly/></dd>
+					</dl>
+					<div id="submit_buttons">
+						<button type="submit">Submit</button>
+					</div>
+				</form>
+			</div>
 		</div>
 		<div id="ft">
 		</div>
